@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>260</width>
-    <height>550</height>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>85</y>
+      <y>80</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -41,7 +41,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>85</y>
+      <y>80</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -54,7 +54,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>250</y>
+      <y>280</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -85,7 +85,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>360</y>
+      <y>330</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -103,10 +103,13 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>360</y>
+      <y>330</y>
       <width>140</width>
       <height>30</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Sunken</enum>
@@ -130,11 +133,16 @@
    <widget class="QPushButton" name="button_equal">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>305</y>
-      <width>220</width>
+      <x>180</x>
+      <y>280</y>
+      <width>60</width>
       <height>30</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>=</string>
@@ -144,7 +152,7 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>85</y>
+      <y>80</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -157,7 +165,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>140</y>
+      <y>130</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -170,7 +178,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>140</y>
+      <y>130</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -183,7 +191,7 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>140</y>
+      <y>130</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -196,7 +204,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>195</y>
+      <y>180</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -209,7 +217,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>195</y>
+      <y>180</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -222,7 +230,7 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>195</y>
+      <y>180</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -235,7 +243,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>250</y>
+      <y>230</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -247,8 +255,8 @@
    <widget class="QPushButton" name="button_multiply">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>250</y>
+      <x>100</x>
+      <y>280</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -261,7 +269,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>415</y>
+      <y>380</y>
       <width>140</width>
       <height>30</height>
      </rect>
@@ -283,7 +291,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>415</y>
+      <y>380</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -301,7 +309,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>470</y>
+      <y>430</y>
       <width>140</width>
       <height>30</height>
      </rect>
@@ -323,7 +331,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>470</y>
+      <y>430</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -335,6 +343,32 @@
     </property>
     <property name="text">
      <string>Postfix :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_rp">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>230</y>
+      <width>60</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_lp">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>60</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>(</string>
     </property>
    </widget>
   </widget>

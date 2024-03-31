@@ -23,7 +23,10 @@ class MyParser(Parser):
 
     @_('term DIVIDE expr')
     def expr(self, p):
-        return p.term / p.expr
+        try:
+            return p.term // p.expr
+        except ZeroDivisionError as e:
+            print("Error: Cannot divide by zero")
 
     @_('term')
     def expr(self, p):

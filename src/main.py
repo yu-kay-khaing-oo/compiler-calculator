@@ -5,6 +5,7 @@ from PyQt6.QtWidgets import QMainWindow, QLineEdit, QPushButton, QLCDNumber, QLa
 
 from components.lexica import MyLexer
 from components.parsers import MyParser
+from components.translator import MyTranslator
 
 class MainWindow(QMainWindow):
 
@@ -21,6 +22,8 @@ class MainWindow(QMainWindow):
     button_9:QPushButton
     button_plus:QPushButton
     button_multiply:QPushButton
+    button_lp:QPushButton
+    button_rp:QPushButton
     button_equal:QPushButton
     input_text:QLineEdit
     output_lcd:QLCDNumber
@@ -46,6 +49,9 @@ class MainWindow(QMainWindow):
         self.button_plus.clicked.connect(lambda: self.push("+"))
         self.button_multiply.clicked.connect(lambda: self.push("*"))
 
+        self.button_lp.clicked.connect(lambda: self.push("("))
+        self.button_rp.clicked.connect(lambda: self.push(")"))
+
         self.button_equal.clicked.connect(self.push_equal)
 
     def push(self, text:str):
@@ -58,8 +64,14 @@ class MainWindow(QMainWindow):
         input_text = self.input_text.text()
         if not input_text:
             result = 0
+            self.pre_notation.clear()
+            self.post_notation.clear()
         else:
             result = parser.parse(lexer.tokenize(input_text))
+            translator = MyTranslator()
+            prefix, postfix = translator.translate(input_text)
+            self.pre_notation.setText(prefix)
+            self.post_notation.setText(postfix)
         self.output_lcd.display(result)
 
 if __name__ == "__main__":
