@@ -25,6 +25,7 @@ class MainWindow(QMainWindow):
     button_lp:QPushButton
     button_rp:QPushButton
     button_equal:QPushButton
+    button_clear:QPushButton
     input_text:QLineEdit
     output_lcd:QLCDNumber
     pre_notation:QLabel
@@ -53,6 +54,7 @@ class MainWindow(QMainWindow):
         self.button_rp.clicked.connect(lambda: self.push(")"))
 
         self.button_equal.clicked.connect(self.push_equal)
+        self.button_clear.clicked.connect(self.push_clear)
 
     def push(self, text:str):
         current_text:str = self.input_text.text()
@@ -73,6 +75,12 @@ class MainWindow(QMainWindow):
             self.pre_notation.setText(prefix)
             self.post_notation.setText(postfix)
         self.output_lcd.display(result)
+
+    def push_clear(self):
+        self.input_text.setText("")
+        self.output_lcd.display(0)
+        self.pre_notation.setText("")
+        self.post_notation.setText("")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
